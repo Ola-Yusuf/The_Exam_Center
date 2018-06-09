@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginHorizontal="25dp">
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/exam_title"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/stage"
+            android:layout_below="@id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stage"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/timer"
+            android:layout_below="@id/stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:text="@string/countDown"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="serif-monospace"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"/>
+
+        <!-- A CardView that contains a TextView -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_submit"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:paddingBottom="15dp"
+            card_view:cardBackgroundColor="@color/colorAccent"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/head"
+            android:onClick="submit">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="@string/submit"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="20dp">
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="15dp"
+            />
+
+        <RadioGroup
+            android:id="@+id/btngroup"
+            android:layout_width="match_parent"
+            android:layout_below="@id/question"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp"
+            android:layout_centerVertical="true"
+            >
+            <RadioButton
+                android:id="@+id/radio_button_0"
+                android:onClick="chosenAnswer"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/colorBlack"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:id="@+id/radio_button_1"
+                android:onClick="chosenAnswer"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:id="@+id/radio_button_2"
+                android:onClick="chosenAnswer"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="?android:textAppearanceMedium" />
+            <RadioButton
+                android:id="@+id/radio_button_3"
+                android:onClick="chosenAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginBottom="45dp"
+        >
+
+        <!-- A CardView that contains a TextView -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_previous"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            card_view:cardBackgroundColor="@color/colorAccent"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="10dp"
+            android:layout_alignParentLeft="true"
+            android:onClick="prevQuestion">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="@string/previous"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- A CardView that contains a TextView -->
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_next"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            card_view:cardBackgroundColor="@color/colorAccent"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="10dp"
+            android:layout_alignParentRight="true"
+            android:onClick="nextQuestion">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:text="@string/next"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">The Exam Center</string>
+
+    <string name="values">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="exam_title">General Knowledge About Africa</string>
+
+    <string name="TryAgain">Try Again</string>
+
+    <string name="next">Next</string>
+
+    <string name="previous">Previous</string>
+
+    <string name="submit">Submit</string>
+
+    <string name="instruction"><i><b>Instruction:</b></i>"\n"You have
+        <b>(<xliff:g id="timeAllocatedForExam" example="00:00">%s</xliff:g>)</b>
+        to answer all question. Each question carry equal mark.
+        When you are out of time your work will be submitted Automatically.</string>
+
+    <string name="stage">Question
+        <xliff:g id="cNum" example="1">%d</xliff:g>
+        of
+        <xliff:g id="tNum" example="10">%d</xliff:g>
+    </string>
+
+    <string name="report">
+        Name: <xliff:g id="name" example="Yusuf">%s</xliff:g>
+        "\n"Total Score: <xliff:g id="mark" example="200.12">%2$.1f</xliff:g>%%
+        "\n"Time Spent
+    </string>
+
+    <string name="timeUsed">:
+        <xliff:g id="timeSpentByUser" example="00:00"> %s</xliff:g>
+    </string>
+
+    <string name="countDown">
+        <xliff:g id="timercount" example="00:00">%s</xliff:g>
+    </string>
+
+    <!--45000 is 45 seconds + 1 seconds overhead/extra time-->
+    <integer name="durationOfExamInMillisec">46000</integer>
+
+    <!--
+    Primarily, multidimensional array can not be prepared using the string-array tag.
+    A string array tag correspond to single dimension or linear array.
+    The content of each of the item tag is separated with |
+    To identify each of the value corresponding to 2D array.
+-->
+    <string-array name="questions">
+        <item>Which country has the rand as its currency|South Africa|Rwanda|Kenya|Nigeria</item>
+        <item>Afrikaans is a variety of which European language?|Catalan|Albania|Dutch|Cyprus</item>
+        <item>From which European country did Angola achieve independence in 1975?|France|Portugal|Brazil|Argentina</item>
+        <item>Which country includes the Yoruba, Ibo, and Hausa-Fulani peoples?|Nigeria|Benin|Congo|Ghana</item>
+        <item>What is the capital of Kenya?|Freetown|Accra|Nairobi|Abuja</item>
+        <item>What does ANC stand for?|African National Congress|Africans National Community|African New Congress|African Neglected Countries</item>
+        <item>Which is the second longest river in Africa?|Nile|Limpopo|Benue|Zaire, formerly Congo</item>
+        <item>What is Africa largest country|Sudan|South Africa|Kenya|Madagascar</item>
+        <item>Ikokore is a famous food among Ijebu people in|Congo|Nigeria|Rwanda|Sudan</item>
+        <item>Which of the following country is the Giant of Africa?|Egypt|Cameroon|Morocco|Nigeria</item>
+    </string-array>
+
+    <!-- Corresponding Answer to string-array questions -->
+    <string-array name="answers">
+        <item>South Africa</item>
+        <item>Dutch</item>
+        <item>Portugal</item>
+        <item>Nigeria</item>
+        <item>Nairobi</item>
+        <item>African National Congress</item>
+        <item>Zaire, formerly Congo</item>
+        <item>Sudan</item>
+        <item>Nigeria</item>
+        <item>Nigeria</item>
+    </string-array>
+
+
+</resources>
