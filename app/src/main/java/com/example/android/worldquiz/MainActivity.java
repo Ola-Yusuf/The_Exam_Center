@@ -1,7 +1,6 @@
 package com.example.android.worldquiz;
 
 import android.annotation.SuppressLint;
-import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     String userName;
 
-    int currentQuestion, totalQuestion;
+    int currentQuestion, totalQuestion, markForEachQuestion;
 
     double totalScore;
 
@@ -60,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
         //get the stringArray containing answers to the question and store in markingGuide
         markGuide = getArrayFromXmlFile(R.array.answers);
+
+        markForEachQuestion = this.getResources().getInteger(R.integer.markAllocateForEachQuestion);
 
         userName = "";
 
@@ -324,7 +325,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             //Notify user that s/he is currently at the last available question
-            showToast(" This is the Last Question ");
+            showToast(getString(R.string.lastQuestionToast));
         }
     }
 
@@ -355,7 +356,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             //notify the user s/he is currently on the first question. i.e No previous
-            showToast(" This is the First Question ");
+            showToast(getString(R.string.firstQuestionToast));
         }
     }
 
@@ -385,7 +386,7 @@ public class MainActivity extends AppCompatActivity {
             startTimer(); //start the countdown
         }else {
             //Notify the user about the structure of the user name
-            showToast(" Name is required \n(Letters Only, Min:5,  Max:10 )  ");
+            showToast(getString(R.string.userNameEntryToast));
         }
 
     }
@@ -401,7 +402,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 timeRunning = false;
-                showToast("Time up");
+                showToast(getString(R.string.timeUpToast));
                 endExam();
             }
 

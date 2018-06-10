@@ -14,6 +14,18 @@
 
     <string name="submit">Submit</string>
 
+    <string name="start">Start</string>
+
+    <string name="firstQuestionToast"> This is the First Question </string>
+
+    <string name="lastQuestionToast"> This is the Last Question </string>
+
+    <string name="timeUpToast"> Time UP! </string>
+
+    <string name="userNameEntryToast"> Name is required "\n" (Letters Only, Min:5,  Max:10 )   </string>
+
+    <string name="userNameFieldHint">Enter Your FirstName</string>
+
     <string name="instruction"><i><b>Instruction:</b></i>"\n"You have
         <b>(<xliff:g id="timeAllocatedForExam" example="00:00">%s</xliff:g>)</b>
         to answer all question. Each question carry equal mark.
@@ -24,6 +36,8 @@
         of
         <xliff:g id="tNum" example="10">%d</xliff:g>
     </string>
+
+    <integer name="markAllocateForEachQuestion">10</integer>
 
     <string name="report">
         Name: <xliff:g id="name" example="Yusuf">%s</xliff:g>

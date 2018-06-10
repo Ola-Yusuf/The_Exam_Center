@@ -32,7 +32,7 @@
         android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Your FirstName"
+        android:hint="@string/userNameFieldHint"
         android:inputType="textPersonName"
         android:drawableLeft="@drawable/ic_action_actor"
         android:textSize="26sp"
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"
-                android:text="START"
+                android:text="@string/start"
                 android:textColor="#ffffff" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
